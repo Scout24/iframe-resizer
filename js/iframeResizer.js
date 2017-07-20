@@ -966,8 +966,8 @@
 			function chkType(){
 				if(!element.tagName) {
 					throw new TypeError('Object is not a valid DOM element');
-				} else if ('IFRAME' !== element.tagName.toUpperCase()) {
-					throw new TypeError('Expected <IFRAME> tag, found <'+element.tagName+'>');
+				} else if ('IFRAME' !== element.tagName.toUpperCase() && 'PAGESPEED_IFRAME' !== element.tagName.toUpperCase()) {
+					throw new TypeError('Expected <IFRAME> or <PAGESPEED_IFRAME> tag, found <'+element.tagName+'>');
 				}
 			}
 
